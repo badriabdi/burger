@@ -3,9 +3,10 @@ USE burgers_db;
 
 -- Create the table actors.
 CREATE TABLE burgers (
-  id int AUTO_INCREMENT,
-  burger_name(150) NOT NULL,
-  devoured boolean,
-  PRIMARY KEY(id)
+  id int NOT NULL AUTO_INCREMENT,
+	burger_name varchar(127) NOT NULL,
+	devoured BOOLEAN DEFAULT false,
+	date TIMESTAMP DEFAULT now(),
+	PRIMARY KEY (id)
 );
 
